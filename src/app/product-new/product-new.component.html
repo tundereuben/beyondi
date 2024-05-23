@@ -8,11 +8,8 @@
         <span class="input-error" *ngIf="errors.productName">{{ errors.productName }}</span>
       </div>
       <div class="mb-3">
-        <div class="form-floating">
-          <textarea class="form-control"  id="floatingTextarea" formControlName="desc"
-                    (keyup)="clearError('desc')"></textarea>
-          <label for="floatingTextarea">Description</label>
-        </div>
+        <label for="desc" class="form-label">Description</label>
+        <textarea class="form-control" id="desc" formControlName="desc" rows="3" (keyup)="clearError('desc')"></textarea>
         <span class="input-error" *ngIf="errors.desc">{{ errors.desc }}</span>
       </div>
       <div class="mb-3">
