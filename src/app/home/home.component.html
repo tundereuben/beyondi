@@ -1,0 +1,17 @@
+<div class="row mt-2">
+  <div class="col-sm-6 offset-sm-3 col-12 form-container border p-3">
+    <form [formGroup]="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="email" formControlName="email" (keyup)="clearError('email')">
+        <span class="input-error" *ngIf="errors.email">{{ errors.email }}</span>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password" (keyup)="clearError('password')">
+        <span class="input-error" *ngIf="errors.password">{{ errors.password }}</span>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="loginUserIn()">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<ng-container *ngIf="product!==undefined">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <div class="card p-3">
+          <h5>{{ product.productName }}</h5>
+          <p>{{ product.desc }}</p>
+          <p>{{ product.price | currency }}</p>
+
+          <div class="text-center">
+            <button class="btn btn-primary mx-2" (click)="editProduct()">Edit Product</button>
+            <button class="btn btn-danger" (click)="deleteProduct()">Delete Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

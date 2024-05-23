@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <ng-container *ngFor="let product of products">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.productName }}</h5>
+            <p class="card-text">
+              {{ product.desc }}
+            </p>
+            <div class="row">
+              <div class="col-sm-4 offset-sm-5">
+                {{ product.price | currency }}
+              </div>
+              <div class="col-sm-3">
+                <a class="btn btn-secondary" (click)="viewProductDetails(product)">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

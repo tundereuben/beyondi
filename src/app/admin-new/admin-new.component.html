@@ -1,0 +1,55 @@
+<!--
+<div class="row mt-5">
+  <div class="col-sm-6 offset-sm-3 col-12 form-container border p-3">
+    <form [formGroup]="adminForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="productName"
+               formControlName="productName" (keyup)="clearError('productName')">
+&lt;!&ndash;        <span class="input-error" *ngIf="errors.productName">{{ errors.productName }}</span>&ndash;&gt;
+      </div>
+      <div class="mb-3">
+        <div class="form-floating">
+          <textarea class="form-control"  id="floatingTextarea" formControlName="desc"
+                    (keyup)="clearError('desc')"></textarea>
+          <label for="floatingTextarea">Description</label>
+        </div>
+&lt;!&ndash;        <span class="input-error" *ngIf="errors.desc">{{ errors.desc }}</span>&ndash;&gt;
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" aria-describedby="price"
+               formControlName="price" (keyup)="clearError('price')">
+&lt;!&ndash;        <span class="input-error" *ngIf="errors.price">{{ errors.price }}</span>&ndash;&gt;
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="createAdmin()">Submit</button>
+    </form>
+  </div>
+</div>
+-->
+
+<div class="row mt-2">
+  <div class="col-sm-6 offset-sm-3 col-12 form-container border p-3">
+    <form [formGroup]="adminForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name" formControlName="name">
+        <!--<span class="input-error" *ngIf="errors.email">{{ errors.email }}</span>-->
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="email" formControlName="email">
+        <!--<span class="input-error" *ngIf="errors.email">{{ errors.email }}</span>-->
+      </div>
+      <div class="mb-3">
+        <label for="userType" class="form-label">Usertype</label>
+        <select class="form-select" aria-label="Default select example" formControlName="userType" id="userType">
+          <option selected>Usertype</option>
+          <option value="admin">Admin</option>
+          <option value="clerk">Clerk</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="createAdmin()">Submit</button>
+    </form>
+  </div>
+</div>

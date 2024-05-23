@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+#logo {
+  width: 150px;
+}
+
+.input-error {
+  color: red;
+}
+
+.nav-pills .nav-link {
+  color: #3ED2D2;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #397B7B;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #eee;
+  color: #397B7B;
+}
+
+.btn-secondary {
+  background: #397B7B;
+  border: none;
+}
+
+.card {
+  border: solid 1px #397B7B;
+  color: #397B7B;
+}
+
+.card a {
+  font-size: small;
+  font-weight: bold;
+}

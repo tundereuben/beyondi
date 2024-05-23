@@ -1,0 +1,23 @@
+<div class="container my-5">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.userType }}</td>
+      <td>
+        <a class="btn btn-link text-danger" routerLink="admin">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

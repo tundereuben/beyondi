@@ -1,0 +1,27 @@
+<div class="row mt-2">
+  <div class="col-sm-6 offset-sm-3 col-12 form-container border p-3">
+    <form [formGroup]="productForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Product name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="productName"
+               formControlName="productName" (keyup)="clearError('productName')">
+        <span class="input-error" *ngIf="errors.productName">{{ errors.productName }}</span>
+      </div>
+      <div class="mb-3">
+        <div class="form-floating">
+          <textarea class="form-control"  id="floatingTextarea" formControlName="desc"
+                    (keyup)="clearError('desc')"></textarea>
+          <label for="floatingTextarea">Description</label>
+        </div>
+        <span class="input-error" *ngIf="errors.desc">{{ errors.desc }}</span>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" aria-describedby="price"
+               formControlName="price" (keyup)="clearError('price')">
+        <span class="input-error" *ngIf="errors.price">{{ errors.price }}</span>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="createProduct()">Submit</button>
+    </form>
+  </div>
+</div>
